@@ -13,7 +13,7 @@
       padding: 30px;
     }
 
-    select, button {
+    select, button, input {
       padding: 10px;
       margin: 10px;
       font-size: 16px;
@@ -39,12 +39,11 @@
   <select id="stationSelect"></select><br/>
   <img id="stationLogo" src="" alt="Station Logo" /><br/>
   <div id="stationDescription" class="description"></div>
+
   <label for="streamUrlInput">Stream URL:</label><br />
   <input type="text" id="streamUrlInput" style="width: 90%; max-width: 600px;" /><br />
   <button onclick="saveCustomURL()">💾 Save Custom URL</button><br /><br />
 
-
-  <br/>
   <button onclick="togglePlayPause()">▶️ Play / ⏸ Pause</button>
 
   <br /><br />
@@ -61,65 +60,60 @@
     const radioPlayer = document.getElementById('radioPlayer');
     const locationInfo = document.getElementById('locationInfo');
     const streamUrlInput = document.getElementById('streamUrlInput');
-  
+
     let stations = [];
-  
+    let hlsInstance = null;
+
     // IndexedDB setup
     let db;
     const DB_NAME = "RadioPlayerDB";
     const STORE_NAME = "CustomURLs";
-  
+
     const request = indexedDB.open(DB_NAME, 1);
-  
+
     request.onupgradeneeded = (event) => {
       db = event.target.result;
       db.createObjectStore(STORE_NAME, { keyPath: "stationKey" });
     };
-  
+
     request.onsuccess = (event) => {
       db = event.target.result;
     };
-  
+
     request.onerror = (event) => {
       console.error("IndexedDB error:", event.target.errorCode);
     };
-  
+
     function saveCustomURL() {
       const selected = stationSelect.selectedOptions[0];
       if (!selected || !db) return;
-  
+
       const stationKey = selected.text;
       const customURL = streamUrlInput.value;
-  
+
       const tx = db.transaction(STORE_NAME, "readwrite");
       const store = tx.objectStore(STORE_NAME);
       store.put({ stationKey, customURL });
-  
-      radioPlayer.src = customURL;
-      radioPlayer.play().catch((err) => {
-        if (err.name !== 'AbortError') {
-          console.error("Playback error:", err);
-        }
-      });
 
+      updateStation(); // Re-load using new URL
     }
-  
+
     function getCustomURL(stationKey, callback) {
       if (!db) return callback(null);
-  
+
       const tx = db.transaction(STORE_NAME, "readonly");
       const store = tx.objectStore(STORE_NAME);
       const request = store.get(stationKey);
-  
+
       request.onsuccess = () => {
         callback(request.result?.customURL || null);
       };
-  
+
       request.onerror = () => {
         callback(null);
       };
     }
-  
+
     function togglePlayPause() {
       if (radioPlayer.paused) {
         radioPlayer.play().catch((err) => {
@@ -127,90 +121,79 @@
             console.error("Playback error:", err);
           }
         });
-
       } else {
         radioPlayer.pause();
       }
     }
-  
-    let hlsInstance = null;
 
-  function updateStation() {
-    const selected = stationSelect.selectedOptions[0];
-    if (!selected) return;
+    function updateStation() {
+      const selected = stationSelect.selectedOptions[0];
+      if (!selected) return;
 
-    const defaultStream = selected.value;
-    const stationKey = selected.text;
+      const defaultStream = selected.value;
+      const stationKey = selected.text;
 
-    getCustomURL(stationKey, (customURL) => {
-      const stream = customURL || defaultStream;
-      const imageUrl = selected.dataset.image;
-      const description = selected.dataset.description;
+      getCustomURL(stationKey, (customURL) => {
+        const stream = customURL || defaultStream;
+        const imageUrl = selected.dataset.image;
+        const description = selected.dataset.description;
 
-      stationLogo.src = imageUrl;
-      stationDescription.textContent = description || '';
-      streamUrlInput.value = stream;
+        // Reset audio player
+        radioPlayer.pause();
+        radioPlayer.removeAttribute('src');
+        radioPlayer.load();
 
-      // Stop any previous HLS instance
-      if (hlsInstance) {
-        hlsInstance.destroy();
-        hlsInstance = null;
-      }
+        if (hlsInstance) {
+          hlsInstance.destroy();
+          hlsInstance = null;
+        }
 
-      // If it's an HLS stream and supported
-      if (stream.endsWith('.m3u8')) {
-        if (Hls.isSupported()) {
-          hlsInstance = new Hls();
-          hlsInstance.loadSource(stream);
-          hlsInstance.attachMedia(radioPlayer);
-          hlsInstance.on(Hls.Events.MANIFEST_PARSED, () => {
-            radioPlayer.pause();
-            radioPlayer.src = ''; // Clear current source
+        stationLogo.src = imageUrl;
+        stationDescription.textContent = description || '';
+        streamUrlInput.value = stream;
 
-            radioPlayer.play().catch((err) => {
+        // Handle HLS streams
+        if (stream.endsWith('.m3u8')) {
+          if (Hls.isSupported()) {
+            hlsInstance = new Hls();
+            hlsInstance.loadSource(stream);
+            hlsInstance.attachMedia(radioPlayer);
+            hlsInstance.on(Hls.Events.MANIFEST_PARSED, () => {
+              radioPlayer.play().catch(err => {
+                if (err.name !== 'AbortError') {
+                  console.error("HLS playback error:", err);
+                }
+              });
+            });
+          } else if (radioPlayer.canPlayType('application/vnd.apple.mpegurl')) {
+            radioPlayer.src = stream;
+            radioPlayer.load();
+            radioPlayer.play().catch(err => {
               if (err.name !== 'AbortError') {
-                console.error("Playback error:", err);
+                console.error("Native HLS playback error:", err);
               }
             });
-
-          });
-        } else if (radioPlayer.canPlayType('application/vnd.apple.mpegurl')) {
-          // Native support (e.g., Safari)
+          } else {
+            alert("HLS is not supported in your browser.");
+          }
+        } else {
           radioPlayer.src = stream;
-          radioPlayer.pause();
-          radioPlayer.src = ''; // Clear current source
-
-          radioPlayer.play().catch((err) => {
+          radioPlayer.load();
+          radioPlayer.play().catch(err => {
             if (err.name !== 'AbortError') {
               console.error("Playback error:", err);
             }
           });
-
-        } else {
-          alert('This browser does not support HLS streaming.');
         }
-      } else {
-        radioPlayer.src = stream;
-        radioPlayer.pause();
-        radioPlayer.src = ''; // Clear current source
+      });
+    }
 
-        radioPlayer.play().catch((err) => {
-          if (err.name !== 'AbortError') {
-            console.error("Playback error:", err);
-          }
-        });
-
-      }
-    });
-  }
-
-  
     function populateStations(stationList) {
       stationSelect.innerHTML = '';
       stationList.forEach(station => {
-        const stream = station.aacStream || station.mp3Stream;
+        const stream = station.aacStream || station.mp3Stream || station.hlsStream;
         if (!stream) return;
-  
+
         const option = document.createElement('option');
         option.value = stream;
         option.text = `${station.name} (${station.country})`;
@@ -218,20 +201,20 @@
         option.dataset.description = station.description || '';
         stationSelect.appendChild(option);
       });
-  
+
       if (stationSelect.options.length > 0) {
         updateStation();
       } else {
         locationInfo.textContent += ' – No stations found for your country.';
       }
     }
-  
+
     fetch('https://ipapi.co/json/')
       .then(res => res.json())
       .then(location => {
         const countryCode = location.country || 'RO';
         locationInfo.textContent = `🎯 Location detected: ${location.city}, ${location.region}, ${countryCode}`;
-  
+
         const stationsFile = `${countryCode}/stations.json`;
         fetch(stationsFile)
           .then(res => {
@@ -250,9 +233,8 @@
       .catch(() => {
         locationInfo.textContent = "❌ Location could not be determined.";
       });
-  
+
     stationSelect.addEventListener('change', updateStation);
   </script>
-  
 </body>
 </html>
