@@ -96,7 +96,12 @@
       store.put({ stationKey, customURL });
   
       radioPlayer.src = customURL;
-      radioPlayer.play();
+      radioPlayer.play().catch((err) => {
+        if (err.name !== 'AbortError') {
+          console.error("Playback error:", err);
+        }
+      });
+
     }
   
     function getCustomURL(stationKey, callback) {
@@ -117,7 +122,12 @@
   
     function togglePlayPause() {
       if (radioPlayer.paused) {
-        radioPlayer.play();
+        radioPlayer.play().catch((err) => {
+          if (err.name !== 'AbortError') {
+            console.error("Playback error:", err);
+          }
+        });
+
       } else {
         radioPlayer.pause();
       }
@@ -154,18 +164,42 @@
           hlsInstance.loadSource(stream);
           hlsInstance.attachMedia(radioPlayer);
           hlsInstance.on(Hls.Events.MANIFEST_PARSED, () => {
-            radioPlayer.play();
+            radioPlayer.pause();
+            radioPlayer.src = ''; // Clear current source
+
+            radioPlayer.play().catch((err) => {
+              if (err.name !== 'AbortError') {
+                console.error("Playback error:", err);
+              }
+            });
+
           });
         } else if (radioPlayer.canPlayType('application/vnd.apple.mpegurl')) {
           // Native support (e.g., Safari)
           radioPlayer.src = stream;
-          radioPlayer.play();
+          radioPlayer.pause();
+          radioPlayer.src = ''; // Clear current source
+
+          radioPlayer.play().catch((err) => {
+            if (err.name !== 'AbortError') {
+              console.error("Playback error:", err);
+            }
+          });
+
         } else {
           alert('This browser does not support HLS streaming.');
         }
       } else {
         radioPlayer.src = stream;
-        radioPlayer.play();
+        radioPlayer.pause();
+        radioPlayer.src = ''; // Clear current source
+
+        radioPlayer.play().catch((err) => {
+          if (err.name !== 'AbortError') {
+            console.error("Playback error:", err);
+          }
+        });
+
       }
     });
   }
