@@ -39,6 +39,10 @@
   <select id="stationSelect"></select><br/>
   <img id="stationLogo" src="" alt="Station Logo" /><br/>
   <div id="stationDescription" class="description"></div>
+  <label for="streamUrlInput">Stream URL:</label><br />
+  <input type="text" id="streamUrlInput" style="width: 90%; max-width: 600px;" /><br />
+  <button onclick="saveCustomURL()">💾 Save Custom URL</button><br /><br />
+
 
   <br/>
   <button onclick="togglePlayPause()">▶️ Play / ⏸ Pause</button>
@@ -48,15 +52,69 @@
     Your browser does not support the audio element.
   </audio>
 
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
   <script>
     const stationSelect = document.getElementById('stationSelect');
     const stationLogo = document.getElementById('stationLogo');
     const stationDescription = document.getElementById('stationDescription');
     const radioPlayer = document.getElementById('radioPlayer');
     const locationInfo = document.getElementById('locationInfo');
-
+    const streamUrlInput = document.getElementById('streamUrlInput');
+  
     let stations = [];
-
+  
+    // IndexedDB setup
+    let db;
+    const DB_NAME = "RadioPlayerDB";
+    const STORE_NAME = "CustomURLs";
+  
+    const request = indexedDB.open(DB_NAME, 1);
+  
+    request.onupgradeneeded = (event) => {
+      db = event.target.result;
+      db.createObjectStore(STORE_NAME, { keyPath: "stationKey" });
+    };
+  
+    request.onsuccess = (event) => {
+      db = event.target.result;
+    };
+  
+    request.onerror = (event) => {
+      console.error("IndexedDB error:", event.target.errorCode);
+    };
+  
+    function saveCustomURL() {
+      const selected = stationSelect.selectedOptions[0];
+      if (!selected || !db) return;
+  
+      const stationKey = selected.text;
+      const customURL = streamUrlInput.value;
+  
+      const tx = db.transaction(STORE_NAME, "readwrite");
+      const store = tx.objectStore(STORE_NAME);
+      store.put({ stationKey, customURL });
+  
+      radioPlayer.src = customURL;
+      radioPlayer.play();
+    }
+  
+    function getCustomURL(stationKey, callback) {
+      if (!db) return callback(null);
+  
+      const tx = db.transaction(STORE_NAME, "readonly");
+      const store = tx.objectStore(STORE_NAME);
+      const request = store.get(stationKey);
+  
+      request.onsuccess = () => {
+        callback(request.result?.customURL || null);
+      };
+  
+      request.onerror = () => {
+        callback(null);
+      };
+    }
+  
     function togglePlayPause() {
       if (radioPlayer.paused) {
         radioPlayer.play();
@@ -64,27 +122,61 @@
         radioPlayer.pause();
       }
     }
+  
+    let hlsInstance = null;
 
-    function updateStation() {
-      const selected = stationSelect.selectedOptions[0];
-      if (!selected) return;
+  function updateStation() {
+    const selected = stationSelect.selectedOptions[0];
+    if (!selected) return;
 
-      const stream = selected.value;
+    const defaultStream = selected.value;
+    const stationKey = selected.text;
+
+    getCustomURL(stationKey, (customURL) => {
+      const stream = customURL || defaultStream;
       const imageUrl = selected.dataset.image;
       const description = selected.dataset.description;
 
-      radioPlayer.src = stream;
       stationLogo.src = imageUrl;
       stationDescription.textContent = description || '';
-      radioPlayer.play();
-    }
+      streamUrlInput.value = stream;
 
+      // Stop any previous HLS instance
+      if (hlsInstance) {
+        hlsInstance.destroy();
+        hlsInstance = null;
+      }
+
+      // If it's an HLS stream and supported
+      if (stream.endsWith('.m3u8')) {
+        if (Hls.isSupported()) {
+          hlsInstance = new Hls();
+          hlsInstance.loadSource(stream);
+          hlsInstance.attachMedia(radioPlayer);
+          hlsInstance.on(Hls.Events.MANIFEST_PARSED, () => {
+            radioPlayer.play();
+          });
+        } else if (radioPlayer.canPlayType('application/vnd.apple.mpegurl')) {
+          // Native support (e.g., Safari)
+          radioPlayer.src = stream;
+          radioPlayer.play();
+        } else {
+          alert('This browser does not support HLS streaming.');
+        }
+      } else {
+        radioPlayer.src = stream;
+        radioPlayer.play();
+      }
+    });
+  }
+
+  
     function populateStations(stationList) {
-      stationSelect.innerHTML = ''; // Clear previous
+      stationSelect.innerHTML = '';
       stationList.forEach(station => {
         const stream = station.aacStream || station.mp3Stream;
         if (!stream) return;
-
+  
         const option = document.createElement('option');
         option.value = stream;
         option.text = `${station.name} (${station.country})`;
@@ -92,21 +184,20 @@
         option.dataset.description = station.description || '';
         stationSelect.appendChild(option);
       });
-
+  
       if (stationSelect.options.length > 0) {
         updateStation();
       } else {
         locationInfo.textContent += ' – No stations found for your country.';
       }
     }
-
-    // Get user location and load correct station list
+  
     fetch('https://ipapi.co/json/')
       .then(res => res.json())
       .then(location => {
-        const countryCode = location.country || 'RO'; // Fallback to RO
+        const countryCode = location.country || 'RO';
         locationInfo.textContent = `🎯 Location detected: ${location.city}, ${location.region}, ${countryCode}`;
-
+  
         const stationsFile = `${countryCode}/stations.json`;
         fetch(stationsFile)
           .then(res => {
@@ -125,8 +216,9 @@
       .catch(() => {
         locationInfo.textContent = "❌ Location could not be determined.";
       });
-
+  
     stationSelect.addEventListener('change', updateStation);
   </script>
+  
 </body>
 </html>
