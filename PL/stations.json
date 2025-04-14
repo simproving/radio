@@ -1,0 +1,235 @@
+{
+    "stations": [
+      {
+        "id": "PL1",
+        "name": "Radio Nowy Świat",
+        "country": "Polska",
+        "description": "Pion i Poziom",
+        "genre": "Muzyka, Publicystyka",
+        "frequency": 0.0,
+        "mp3Stream": "https://n15a-eu.rcs.revma.com/ypqt40u0x1zuv?rj-ttl=5&rj-tok=AAABekk0sJEAzy6iTuiuEbOk0A",
+        "aacStream": "https://n20a-eu.rcs.revma.com/5ws0kfn1x1zuv?rj-ttl=5&rj-tok=AAABekk1VN0Ah9W_YPLuW6U0Bg",
+        "imageUrl": "https://cdn-profiles.tunein.com/s174766/images/logog.jpg"
+      },
+      {
+        "id": "PL2",
+        "name": "Radio 357",
+        "country": "Polska",
+        "description": "Twoja Ulubiona Muzyka!",
+        "genre": "Muzyka, Publicystyka",
+        "frequency": 0.0,
+        "mp3Stream": "https://stream.rcs.revma.com/an1ugyygzk8uv",
+        "aacStream": "https://stream.rcs.revma.com/ye5kghkgcm0uv",
+        "imageUrl": "https://radio.byme.dev/PL/IMG/PL2.png"
+      },
+      {
+        "id": "PL3",
+        "name": "Radio Lublin",
+        "country": "Polska",
+        "description": "Najświeższe informacje z Lublina",
+        "genre": "Muzyka, Wiadomości Regionalne",
+        "frequency": 102.2,
+        "mp3Stream": "https://streaming.radio.lublin.pl:8843/128k",
+        "aacStream": "",
+        "imageUrl": "https://radio.lublin.pl/static/logo_rl.png"
+      },
+      {
+        "id": "PL4",
+        "name": "Radio Eska",
+        "country": "Polska",
+        "description": "Hity na czasie!",
+        "genre": "Pop, Rock",
+        "frequency": 105.6,
+        "mp3Stream": "https://radio.stream.smcdn.pl/icradio-p/2380-1.mp3/playlist.m3u8",
+        "aacStream": "https://radio.stream.smcdn.pl/icradio-p/2380-1.aac/playlist.m3u8",
+        "imageUrl": "https://radio.byme.dev/PL/IMG/PL4.png"
+      },
+      {
+        "id": "PL5",
+        "name": "Radio VOX FM",
+        "country": "Polska",
+        "description": "W Rytmie Hitów",
+        "genre": "Pop, Rock",
+        "frequency": 106.4,
+        "mp3Stream": "https://radio.stream.smcdn.pl/icradio-p/3990-1.mp3/playlist.m3u8",
+        "aacStream": "https://radio.stream.smcdn.pl/icradio-p/3990-1.aac/playlist.m3u8",
+        "imageUrl": "https://radio.byme.dev/PL/IMG/PL5.png"
+      },
+      {
+        "id": "PL6",
+        "name": "Radio ZET",
+        "country": "Polska",
+        "description": "Najświeższe informacje",
+        "genre": "Muzyka, Wiadomości",
+        "frequency": 102.2,
+        "mp3Stream": "https://r.dcs.redcdn.pl/sc/o2/Eurozet/live/audio.livx?audio=5",
+        "aacStream": "https://r.dcs.redcdn.pl/sc/o2/Eurozet/live/audio.livx",
+        "imageUrl": "https://radio.byme.dev/PL/IMG/PL6.png"
+      },
+      {
+        "id": "PL7",
+        "name": "RMF FM",
+        "country": "Polska",
+        "description": "Radio, Muzyka, Fakty",
+        "genre": "Muzyka, Wiadomości",
+        "frequency": 91.0,
+        "mp3Stream": "https://rs203-krk.rmfstream.pl/rmf_fm",
+        "aacStream": "https://rs203-krk.rmfstream.pl/RMFFM48",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/RMF_FM_logo.svg/1200px-RMF_FM_logo.svg.png"
+      },
+      {
+        "id": "PL8",
+        "name": "RMF MAXX",
+        "country": "Polska",
+        "description": "Radio, Muzyka, Fakty",
+        "genre": "Muzyka, Wiadomości",
+        "frequency": 95.8,
+        "mp3Stream": "https://rs203-krk.rmfstream.pl/rmf_maxxx",
+        "aacStream": "https://rs203-krk.rmfstream.pl/RMFMAXXX48",
+        "imageUrl": "https://radio.byme.dev/PL/IMG/PL8.png"
+      },
+      {
+        "id": "PL9",
+        "name": "AntyRadio",
+        "country": "Polska",
+        "description": "Najlepsza muzyka rockowa",
+        "genre": "Rock",
+        "frequency": 106.8,
+        "mp3Stream": "https://n-16-1.dcs.redcdn.pl/sc/o2/Eurozet/live/antyradio.livx",
+        "aacStream": "",
+        "imageUrl": "https://radio.byme.dev/PL/IMG/PL9.png"
+      },
+      {
+        "id": "PL10",
+        "name": "Radio 90",
+        "country": "Polska",
+        "description": "Gramy od 25 lat",
+        "genre": "",
+        "frequency": 93.8,
+        "mp3Stream": "http://stream0.radio90.pl:8000/radio90_96kbps_stereo.mp3",
+        "aacStream": "",
+        "imageUrl": "https://radio.byme.dev/PL/IMG/PL10.png"
+      },
+      {
+        "id": "PL11",
+        "name": "Radio Złote Przeboje",
+        "country": "Polska",
+        "description": "Największe przeboje lat 80, 90, 00",
+        "genre": "",
+        "frequency": 100.1,
+        "mp3Stream": "https://pl2-play.adtonos.com/zote-przeboje",
+        "aacStream": "",
+        "imageUrl": "https://radio.byme.dev/PL/IMG/PL11.png"
+      },
+      {
+        "id": "PL12",
+        "name": "Radio Kampus",
+        "country": "Polska",
+        "description": "#SAMESZTOSY",
+        "genre": "Alternative, Pop",
+        "frequency": 97.1,
+        "mp3Stream": "https://stream.open.fm/337",
+        "aacStream": "",
+        "imageUrl": "https://api.radiokampus.fm/site/assets/files/1338/banner_kampus.png"
+      },
+      {
+        "id": "PL13",
+        "name": "Chillizet",
+        "country": "Polska",
+        "description": "Relaksująca muzyka",
+        "genre": "Soul, Jazz, Pop",
+        "frequency": 101.5,
+        "mp3Stream": "https://ch02.cdn.eurozet.pl/CHIPOL.mp3",
+        "aacStream": "",
+        "imageUrl": "https://i.imgur.com/bFO0NCE.png"
+      },
+      {
+        "id": "PL14",
+        "name": "Radio Freee",
+        "country": "Polska",
+        "description": "Hity Non Stop",
+        "genre": "Pop, Rock",
+        "frequency": 89.9,
+        "mp3Stream": "https://streaming.radio.lublin.pl:8843/radiofreee",
+        "aacStream": "",
+        "imageUrl": "https://radio.byme.dev/PL/IMG/PL14.png"
+      },
+      {
+        "id": "PL15",
+        "name": "Radio SuperNova",
+        "country": "Polska",
+        "description": "Zawsze Polska Muzyka",
+        "genre": "Top 40, World music",
+        "frequency": 89.8,
+        "mp3Stream": "https://radio.stream.smcdn.pl/icradio-p/1380-1.aac/playlist.m3u8",
+        "aacStream": "",
+        "imageUrl": "https://cdn.radios.smcloud.net/t/plugs/Super-Logo_rg-cyD9-BU7v-os5Q_500x500.jpg"
+      },
+      {
+        "id": "PL16",
+        "name": "Eska Śląsk",
+        "country": "Polska",
+        "description": "Hity na czasie!",
+        "genre": "Pop, Rock",
+        "frequency": 99.1,
+        "mp3Stream": "https://radio.stream.smcdn.pl/icradio-p/2220-1.mp3/playlist.m3u8",
+        "aacStream": "https://radio.stream.smcdn.pl/icradio-p/2220-1.aac/playlist.m3u8",
+        "imageUrl": "https://radio.byme.dev/PL/IMG/PL4.png"
+      },
+      {
+        "id": "PL17",
+        "name": "RMF24",
+        "country": "Polska",
+        "description": "Najbliżej faktów",
+        "genre": "News, World",
+        "frequency": 0.0,
+        "mp3Stream": "https://rs203-krk-cyfronet.rmfstream.pl/RMF24",
+        "aacStream": "",
+        "imageUrl": "https://i.iplsc.com/0007T0Q8S45GRKJY-C0.png"
+      },
+      {
+        "id": "PL18",
+        "name": "Tok FM",
+        "country": "Polska",
+        "description": "Pierwsze Radio Informacyjne",
+        "genre": "News, Talk",
+        "frequency": 97.4,
+        "mp3Stream": "https://pl-play.adtonos.com/tok-fm",
+        "aacStream": "",
+        "imageUrl": "https://radio.byme.dev/PL/IMG/PL18.png"
+      },
+      {
+        "id": "PL19",
+        "name": "Pogoda",
+        "country": "Polska",
+        "description": "Najpiękniejsze melodie",
+        "genre": "Classic Hits",
+        "frequency": 88.4,
+        "mp3Stream": "http://stream10.radioagora.pl/tuba139-1.mp3",
+        "aacStream": "",
+        "imageUrl": "https://radio.byme.dev/PL/IMG/PL19.png"
+      },
+      {
+        "id": "PL20",
+        "name": "Piekary",
+        "country": "Polska",
+        "description": "Lokalna stacja muzyczno-informacyjna",
+        "genre": "Classic Hits",
+        "frequency": 88.7,
+        "mp3Stream": "https://stream.radiopiekary.pl/",
+        "aacStream": "",
+        "imageUrl": "https://radio.byme.dev/PL/IMG/PL20.png"
+      },
+      {
+        "id": "PL21",
+        "name": "Express FM",
+        "country": "Polska",
+        "description": "Prawdziwa lokalna stacja!",
+        "genre": "Pop, News",
+        "frequency": 92.3,
+        "mp3Stream": "https://stream.rcs.revma.com/yx6cub73kwzuv",
+        "aacStream": "",
+        "imageUrl": "https://www.radioexpress.pl/assets/images/logo_re.png"
+      }
+    ]
+  }

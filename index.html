@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>World Radio Player</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: #fff;
+      text-align: center;
+      padding: 30px;
+    }
+
+    select, button {
+      padding: 10px;
+      margin: 10px;
+      font-size: 16px;
+    }
+
+    img {
+      width: 120px;
+      height: auto;
+      margin: 20px auto;
+    }
+
+    .description {
+      margin-top: 10px;
+      font-style: italic;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌍 World Radio Player</h1>
+  <p id="locationInfo">Detecting your location...</p>
+
+  <select id="stationSelect"></select><br/>
+  <img id="stationLogo" src="" alt="Station Logo" /><br/>
+  <div id="stationDescription" class="description"></div>
+
+  <br/>
+  <button onclick="togglePlayPause()">▶️ Play / ⏸ Pause</button>
+
+  <br /><br />
+  <audio id="radioPlayer" controls style="width: 100%; max-width: 600px;">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    const stationSelect = document.getElementById('stationSelect');
+    const stationLogo = document.getElementById('stationLogo');
+    const stationDescription = document.getElementById('stationDescription');
+    const radioPlayer = document.getElementById('radioPlayer');
+    const locationInfo = document.getElementById('locationInfo');
+
+    let stations = [];
+
+    function togglePlayPause() {
+      if (radioPlayer.paused) {
+        radioPlayer.play();
+      } else {
+        radioPlayer.pause();
+      }
+    }
+
+    function updateStation() {
+      const selected = stationSelect.selectedOptions[0];
+      if (!selected) return;
+
+      const stream = selected.value;
+      const imageUrl = selected.dataset.image;
+      const description = selected.dataset.description;
+
+      radioPlayer.src = stream;
+      stationLogo.src = imageUrl;
+      stationDescription.textContent = description || '';
+      radioPlayer.play();
+    }
+
+    function populateStations(stationList) {
+      stationSelect.innerHTML = ''; // Clear previous
+      stationList.forEach(station => {
+        const stream = station.aacStream || station.mp3Stream;
+        if (!stream) return;
+
+        const option = document.createElement('option');
+        option.value = stream;
+        option.text = `${station.name} (${station.country})`;
+        option.dataset.image = station.imageUrl || '';
+        option.dataset.description = station.description || '';
+        stationSelect.appendChild(option);
+      });
+
+      if (stationSelect.options.length > 0) {
+        updateStation();
+      } else {
+        locationInfo.textContent += ' – No stations found for your country.';
+      }
+    }
+
+    // Get user location and load correct station list
+    fetch('https://ipapi.co/json/')
+      .then(res => res.json())
+      .then(location => {
+        const countryCode = location.country || 'RO'; // Fallback to RO
+        locationInfo.textContent = `🎯 Location detected: ${location.city}, ${location.region}, ${countryCode}`;
+
+        const stationsFile = `${countryCode}/stations.json`;
+        fetch(stationsFile)
+          .then(res => {
+            if (!res.ok) throw new Error("Station file not found");
+            return res.json();
+          })
+          .then(data => {
+            stations = data.stations || [];
+            populateStations(stations);
+          })
+          .catch(err => {
+            console.error("Error loading stations:", err);
+            locationInfo.textContent += " – Unable to load local stations.";
+          });
+      })
+      .catch(() => {
+        locationInfo.textContent = "❌ Location could not be determined.";
+      });
+
+    stationSelect.addEventListener('change', updateStation);
+  </script>
+</body>
+</html>

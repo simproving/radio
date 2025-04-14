@@ -1,0 +1,202 @@
+{
+  "stations": [
+    {
+      "id": "ES1",
+      "name": "Los40",
+      "country": "España",
+      "description": "Todos Los \u00c9xitos",
+      "genre": "Pop, Rock",
+      "frequency": 93.9,
+      "mp3Stream": "",
+      "aacStream": "https://playerservices.streamtheworld.com/api/livestream-redirect/LOS40AAC.aac",
+      "imageUrl": "https://radio.byme.dev/ES/IMG/ES1.png"
+    },
+    {
+      "id": "ES2",
+      "name": "Los40 Urban",
+      "country": "España",
+      "description": "El ritmo de la calle",
+      "genre": "Dance, Pop",
+      "frequency": 97.1,
+      "mp3Stream": "",
+      "aacStream": "https://playerservices.streamtheworld.com/api/livestream-redirect/LOS40_URBANAAC.aac",
+      "imageUrl": "https://radio.byme.dev/ES/IMG/ES2.png"
+    },
+    {
+      "id": "ES3",
+      "name": "Los40 Dance",
+      "country": "España",
+      "description": "Puro Dance Radio",
+      "genre": "Electronic, Dance",
+      "frequency": 104.3,
+      "mp3Stream": "",
+      "aacStream": "https://playerservices.streamtheworld.com/api/livestream-redirect/LOS40_DANCEAAC.aac",
+      "imageUrl": "https://radio.byme.dev/ES/IMG/ES3.png"
+    },
+    {
+      "id": "ES4",
+      "name": "Los40 Classic",
+      "country": "España",
+      "description": "La emisora con todos los n\u00ba1 de tu vida",
+      "genre": "Classic Hits",
+      "frequency": 89.0,
+      "mp3Stream": "",
+      "aacStream": "https://playerservices.streamtheworld.com/api/livestream-redirect/LOS40_CLASSICAAC.aac",
+      "imageUrl": "https://radio.byme.dev/ES/IMG/ES4.png"
+    },
+    {
+      "id": "ES5",
+      "name": "Europa FM",
+      "country": "España",
+      "description": "El mejor pop-rock del 2000 hasta hoy",
+      "genre": "Pop, Rock",
+      "frequency": 91.0,
+      "mp3Stream": "",
+      "aacStream": "https://livefastly-webs.europafm.com/europafm/audio/master.m3u8",
+      "imageUrl": "https://radio.byme.dev/ES/IMG/ES5.png"
+    },
+    {
+      "id": "ES6",
+      "name": "Kiss FM",
+      "country": "España",
+      "description": "La mejor de los 80 y los 90 hasta hoy",
+      "genre": "Pop, Rock",
+      "frequency": 101.7,
+      "mp3Stream": "https://kissfm.kissfmradio.cires21.com/kissfm.mp3",
+      "aacStream": "",
+      "imageUrl": "https://radio.byme.dev/ES/IMG/ES6.png"
+    },
+    {
+      "id": "ES7",
+      "name": "Cadena 100",
+      "country": "España",
+      "description": "La mejor variedad musical",
+      "genre": "Pop, Rock",
+      "frequency": 0.0,
+      "mp3Stream": "https://cadena100-cope-rrcast.flumotion.com/cope/cadena100-low.mp3",
+      "aacStream": "",
+      "imageUrl": "https://radio.byme.dev/ES/IMG/ES7.png"
+    },
+    {
+      "id": "ES8",
+      "name": "MegaStar FM",
+      "country": "España",
+      "description": "Solo temazos",
+      "genre": "Pop, Rock",
+      "frequency": 100.7,
+      "mp3Stream": "https://megastar-cope.flumotion.com/playlist.m3u8",
+      "aacStream": "",
+      "imageUrl": "https://radio.byme.dev/ES/IMG/ES8.png"
+    },
+    {
+      "id": "ES9",
+      "name": "Hit FM",
+      "country": "España",
+      "description": "HITS y sol\u00f3 HITS",
+      "genre": "Pop, Rock",
+      "frequency": 89.9,
+      "mp3Stream": "https://hitfm.kissfmradio.cires21.com/hitfm.mp3",
+      "aacStream": "",
+      "imageUrl": "https://radio.byme.dev/ES/IMG/ES9.png"
+    },
+    {
+      "id": "ES10",
+      "name": "Rock FM",
+      "country": "España",
+      "description": "Radio en Espa\u00f1ol",
+      "genre": "Rock",
+      "frequency": 101.6,
+      "mp3Stream": "https://rockfm-cope.flumotion.com/playlist.m3u8",
+      "aacStream": "",
+      "imageUrl": "https://radio.byme.dev/ES/IMG/ES10.png"
+    },
+    {
+      "id": "ES11",
+      "name": "Marca Nacional",
+      "country": "España",
+      "description": "La r\u00e0dio dels esports",
+      "genre": "Sport, Talk",
+      "frequency": 103.5,
+      "mp3Stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIOMARCA_NACIONAL.mp3",
+      "aacStream": "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIOMARCA_NACIONALAAC.aac",
+      "imageUrl": "https://radio.byme.dev/ES/IMG/ES11.png"
+    },
+    {
+      "id": "ES12",
+      "name": "Loca FM",
+      "country": "Spain",
+      "description": "Electronic music radio show",
+      "genre": "Electronic",
+      "frequency": 96.0,
+      "mp3Stream": "http://81.46.247.191:8045/live",
+      "aacStream": "",
+      "imageUrl": "https://radio.byme.dev/ES/IMG/ES12.jpg"
+    },
+    {
+      "id": "ES13",
+      "name": "Flamenco Radio",
+      "country": "España",
+      "description": "Desde la tierra del Flamenco, Flamenco para toda la tierra",
+      "genre": "Flamenco",
+      "frequency": 104.8,
+      "mp3Stream": "https://cdnlive.codev8.net/rtvalive/smil:channel7.smil/chunklist_b250000.m3u8",
+      "aacStream": "",
+      "imageUrl": "https://radio.byme.dev/ES/IMG/ES13.png"
+    },
+    {
+      "id": "ES14",
+      "name": "Melodia FM",
+      "country": "España",
+      "description": "Los mejores éxitos musicales de los setenta ochenta y noventa",
+      "genre": "adulto-contemporáneo",
+      "frequency": 91.4,
+      "mp3Stream": "https://live-audio.melodia-fm.com/radio/melodiafm/bitrate_2.m3u8",
+      "aacStream": "",
+      "imageUrl": "https://radio.byme.dev/ES/IMG/ES14.png"
+    },
+    {
+      "id": "ES15",
+      "name": "Cadena Ser",
+      "country": "España",
+      "description": "Noticias sobre deportes, política, economía, cultura y sociedad",
+      "genre": "Noticias",
+      "frequency": 105.4,
+      "mp3Stream": "https://25693.live.streamtheworld.com/CADENASER_SC",
+      "aacStream": "",
+      "imageUrl": "https://radio.byme.dev/ES/IMG/ES15.png"
+    },
+	  {
+      "id": "ES16",
+      "name": "Cope",
+      "country": "España",
+      "description": "Noticias sobre deportes, política, economía, cultura y sociedad",
+      "genre": "Noticias",
+      "frequency": 106.3,
+      "mp3Stream": "https://net1-cope-rrcast.flumotion.com/cope/net1-low.mp3",
+      "aacStream": "",
+      "imageUrl": "https://radio.byme.dev/ES/IMG/ES16.png"
+    },
+	  {
+      "id": "ES17",
+      "name": "Radio Castilla la Mancha",
+      "country": "España",
+      "description": "Las últimas noticias, programas culturales y de entretenimiento y la mejor música.",
+      "genre": "Musica y Noticias",
+      "frequency": 91.3,
+      "mp3Stream": "https://klive.kaltura.com/s/env/cluster-1-a.live.nvp1/live/hls/p/2288691/e/1_qilzwlkz/tl/main/st/0/t/ViMu_92mnnNf7VdD47RQew/index-s32.m3u8?__hdnea__=st=1652817141~exp=1652903541~acl=/s/env/cluster-1-a.live.nvp1/live/hls/p/2288691/e/1_qilzwlkz/tl/main/st/0/t/ViMu_92mnnNf7VdD47RQew/index-s32.m3u8*~hmac=42170bd372474f2b2498f6bad43cb572be105e66270a89942532104d3255f07e",
+      "aacStream": "",
+      "imageUrl": "https://radio.byme.dev/ES/IMG/ES17.png"
+    },
+	  {
+      "id": "ES18",
+      "name": "Blue Marlin Ibiza",
+      "country": "España",
+      "description": "",
+      "genre": "House, Deep House, CHillout",
+      "frequency": 0.0,
+      "mp3Stream": "https://ice1.viastreaming.net:8443/live",
+      "aacStream": "",
+      "imageUrl": "https://radio.byme.dev/ES/IMG/ES18.png"
+    }
+  ]
+}

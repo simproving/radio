@@ -1,0 +1,257 @@
+{
+  "stations": [
+    {
+      "id": "NL1",
+      "name": "NPO Radio 1",
+      "country": "Netherlands",
+      "description": "Het nieuws van alle kanten",
+      "genre": "News, Sport",
+      "frequency": 98.6,
+      "mp3Stream": "https://icecast.omroep.nl/radio1-bb-mp3",
+      "aacStream": "",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/NPO_Radio_1_logo_2014.svg/200px-NPO_Radio_1_logo_2014.svg.png"
+    },
+    {
+      "id": "NL2",
+      "name": "NPO Radio 2",
+      "country": "Netherlands",
+      "description": "Vertelt het hele verhaal",
+      "genre": "News, Talk",
+      "frequency": 92.6,
+      "mp3Stream": "https://icecast.omroep.nl/radio2-bb-mp3",
+      "aacStream": "",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/NPO_Radio_2_logo.svg/200px-NPO_Radio_2_logo.svg.png"
+    },
+    {
+      "id": "NL3",
+      "name": "NPO 3FM",
+      "country": "Netherlands",
+      "description": "Music Starts Here",
+      "genre": "CHR, Alternative",
+      "frequency": 96.8,
+      "mp3Stream": "https://icecast.omroep.nl/3fm-bb-mp3",
+      "aacStream": "",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/NPO_3FM_logo_2020.svg/220px-NPO_3FM_logo_2020.svg.png"
+    },
+    {
+      "id": "NL4",
+      "name": "NPO Radio 4",
+      "country": "Netherlands",
+      "description": "Klassieke muziek luisteren",
+      "genre": "Classical, Culture",
+      "frequency": 87.6,
+      "mp3Stream": "https://icecast.omroep.nl/radio4-bb-mp3",
+      "aacStream": "",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/NPO_Radio_4_logo_2014.svg/200px-NPO_Radio_4_logo_2014.svg.png"
+    },
+    {
+      "id": "NL5",
+      "name": "NPO Radio 5",
+      "country": "Netherlands",
+      "description": "Je voelt je thuis",
+      "genre": "Classical, Hits",
+      "frequency": 0.0,
+      "mp3Stream": "https://icecast.omroep.nl/radio5-bb-mp3",
+      "aacStream": "",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/NPO_Radio_5_logo_2016.svg/200px-NPO_Radio_5_logo_2016.svg.png"
+    },
+    {
+      "id": "NL6",
+      "name": "Radio 538",
+      "country": "Netherlands",
+      "description": "Één station, Alle Hits",
+      "genre": "Pop, Dance",
+      "frequency": 102.5,
+      "mp3Stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO538.mp3",
+      "aacStream": "",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Logo_Radio_538_2014.svg/256px-Logo_Radio_538_2014.svg.png"
+    },
+    {
+      "id": "NL7",
+      "name": "Q music",
+      "country": "Netherlands",
+      "description": "Q sounds better with you",
+      "genre": "Pop, Rock, Dance",
+      "frequency": 100.7,
+      "mp3Stream": "https://stream.qmusic.nl/qmusic/mp3",
+      "aacStream": "",
+      "imageUrl": "https://radio.byme.dev/NL/IMG/NL7.png"
+    },
+    {
+      "id": "NL8",
+      "name": "VERONICA",
+      "country": "Netherlands",
+      "description": "Veronica is aan land!",
+      "genre": "Pop-Rock-Electro",
+      "frequency": 97.8,
+      "mp3Stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/VERONICA.mp3",
+      "aacStream": "https://playerservices.streamtheworld.com/api/livestream-redirect/VERONICAAAC.aac",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Logo_Radio_Veronica.png"
+    },
+    {
+      "id": "NL9",
+      "name": "Sky Radio",
+      "country": "Netherlands",
+      "description": "Enjoy the music!",
+      "genre": "Pop Music",
+      "frequency": 101.2,
+      "mp3Stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/SKYRADIO.mp3",
+      "aacStream": "https://playerservices.streamtheworld.com/api/livestream-redirect/SKYRADIOAAC.aac",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Sky_Radio_logo_2019.png"
+    },
+    {
+      "id": "NL10",
+      "name": "Slam!",
+      "country": "Netherlands",
+      "description": "Play Music, Play Life",
+      "genre": "Pop, Rock",
+      "frequency": 93.6,
+      "mp3Stream": "https://stream.radiocorp.nl/web14_mp3",
+      "aacStream": "https://stream.radiocorp.nl/web14_aac",
+      "imageUrl": "https://radio.byme.dev/NL/IMG/NL10.png"
+    },
+      {
+      "id": "NL11",
+      "name": "Radio 10",
+      "country": "Netherlands",
+      "description": "De Grootste Hits Aller Tijden",
+      "genre": "Pop, Rock",
+      "frequency": 103.8,
+      "mp3Stream": "http://stream.radio10.nl/radio10",
+      "aacStream": "",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/39/Radio_10_logo_2017.png"
+    },
+      {
+      "id": "NL12",
+      "name": "Sublime FM",
+      "country": "Netherlands",
+      "description": "Let's Get It On!",
+      "genre": "Funk, Soul, Jazz",
+      "frequency": 90.7,
+      "mp3Stream": "https://playerservices.streamtheworld.com/api/livestream-redirect/SUBLIME.mp3",
+      "aacStream": "",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/36/Sublime_FM_logo_2018.png"
+    },
+      {
+      "id": "NL13",
+      "name": "Arrow Classic Rock",
+      "country": "Netherlands",
+      "description": "",
+      "genre": "Classic Rock",
+      "frequency": 98.7,
+      "mp3Stream": "https://stream.gal.io/arrow",
+      "aacStream": "",
+      "imageUrl": "https://www.arrow.nl/wp-content/uploads/2021/12/Arrow-Classic-Rock-Logo-2021.png"
+    },
+    {
+      "id": "NL14",
+      "name": "BNR Nieuwsradio",
+      "country": "Netherlands",
+      "description": "20 Jaar in Business",
+      "genre": "Nieuws",
+      "frequency": 91.3,
+      "mp3Stream": "https://stream.bnr.nl/bnr_mp3_128_20",
+      "aacStream": "https://stream.bnr.nl/bnr_aac_96_20",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/fr/4/4e/BNR_Nieuwsradio_logo.png"
+    },
+    {
+      "id": "NL15",
+      "name": "Continu",
+      "country": "Netherlands",
+      "description": "Altijd gezellig!",
+      "genre": "Schlager, Country",
+      "frequency": 97.9,
+      "mp3Stream": "",
+      "aacStream": "https://stream.gal.io/radio-continu",
+      "imageUrl": "https://radio.byme.dev/NL/IMG/NL15.png"
+    },
+    {
+      "id": "NL16",
+      "name": "RadioNL",
+      "country": "Netherlands",
+      "description": "altijd AAN!",
+      "genre": "Dutch music",
+      "frequency": 104.4,
+      "mp3Stream": "",
+      "aacStream": "https://stream.radionl.fm/radionl",
+      "imageUrl": "https://www.radionl.fm/wp-content/uploads/2021/04/radionl_logo.png"
+    },
+    {
+      "id": "NL17",
+      "name": "Joy Radio",
+      "country": "Netherlands",
+      "description": "Hits only!",
+      "genre": "Dance, 90's Hits",
+      "frequency": 0.0,
+      "mp3Stream": "",
+      "aacStream": "https://stream.joyradio.nl/joyradio",
+      "imageUrl": "https://nl.radio.net/images/broadcasts/5d/89/110487/1/c300.png"
+    },
+    {
+      "id": "NL18",
+      "name": "Hete Hits",
+      "country": "Netherlands",
+      "description": "De grootste en heetste hits hoor je alleen hier!",
+      "genre": "Hits",
+      "frequency": 0.0,
+      "mp3Stream": "http://mcp-2.mm-stream.nl:8029",
+      "aacStream": "",
+      "imageUrl": "https://cdn-profiles.tunein.com/s260759/images/logod.png"
+    },
+    {
+      "id": "NL19",
+      "name": "KINK",
+      "country": "Netherlands",
+      "description": "No Alternative",
+      "genre": "Alternative",
+      "frequency": 107.1,
+      "mp3Stream": "https://22543.live.streamtheworld.com:443/KINK_SC",
+      "aacStream": "https://25333.live.streamtheworld.com:443/KINKAAC_SC",
+      "imageUrl": "https://cdn-profiles.tunein.com/s210430/images/logod.png"
+    },
+    {
+      "id": "NL20",
+      "name": "Kink CLASSICS",
+      "country": "Netherlands",
+      "description": "Het themakanaal KINK CLASSICS, met nonstop de beste alternative classics",
+      "genre": "Alternative classics",
+      "frequency": 107.2,
+      "mp3Stream": "http://22553.live.streamtheworld.com:3690/KINK_DNA_SC",
+      "aacStream": "http://25353.live.streamtheworld.com:80/KINK_DNAAAC_SC",
+      "imageUrl": "https://cdn-profiles.tunein.com/s194478/images/logod.png"
+    },
+      {
+      "id": "NL21",
+      "name": "Kink Distortion",
+      "country": "Netherlands",
+      "description": "Het themakanaal KINK DISTORTION met non-stop de beste metal, hardrock en metalcore",
+      "genre": "metal, hardrock en metalcore",
+      "frequency": 107.3,
+      "mp3Stream": "https://25253.live.streamtheworld.com:443/KINK_DISTORTION_SC",
+      "aacStream": "https://25353.live.streamtheworld.com:443/KINK_DISTORTIONAAC_SC",
+      "imageUrl": "https://cdn-profiles.tunein.com/s276282/images/logod.png"
+    },
+    {
+      "id": "NL22",
+      "name": "Kink Indi",
+      "country": "Netherlands",
+      "description": "Het themakanaal KINK INDIE met non-stop de beste alternatieve indie",
+      "genre": "Indie",
+      "frequency": 107.4,
+      "mp3Stream": "https://22553.live.streamtheworld.com:443/KINKINDIE_SC",
+      "aacStream": "https://22723.live.streamtheworld.com:443/KINKINDIEAAC_SC",
+      "imageUrl": "https://cdn-profiles.tunein.com/s287077/images/logod.png"
+    },
+    {
+      "id": "NL23",
+      "name": "Decibel",
+      "country": "Netherlands",
+      "description": "Decibel | the 90's zijn van ons!",
+      "genre": "90's",
+      "frequency": 107.4,
+      "mp3Stream": "https://22603.live.streamtheworld.com/RADIODECIBEL.mp3 ",
+      "aacStream": "",
+      "imageUrl": "https://www.decibel.nl/wp-content/uploads/2022/04/db.png"
+    }
+  ]
+}

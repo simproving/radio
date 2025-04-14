@@ -1,0 +1,147 @@
+{
+  "stations": [
+    {
+      "id": "RO1",
+      "name": "Kiss FM",
+      "country": "Romania",
+      "description": "Kiss FM - #1 HIT RADIO",
+      "genre": "Pop",
+      "frequency": 0.0,
+      "mp3Stream": "",
+      "aacStream": "https://live.kissfm.ro/kissfm.aacp",
+      "imageUrl": "https://www.kissfm.ro/assets/logo/kissfm.svg"
+    },
+    {
+      "id": "RO2",
+      "name": "Radio ZU",
+      "country": "Romania",
+      "description": "HITURILE se asculta la ZU",
+      "genre": "Pop",
+      "frequency": 89.0,
+      "mp3Stream": "https://live7digi.antenaplay.ro/radiozu/radiozu-48000.m3u8",
+      "aacStream": "",
+      "imageUrl": "https://yt3.googleusercontent.com/S0_eBn7_AnijkmB7Tc7B-mK6XYvwD5LyfClMErP3qHK7GcpdQL2H1sSDdb99Bq0K57KvbmTYlg=s900-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "id": "RO3",
+      "name": "Virgin Radio",
+      "country": "Romania",
+      "description": "Hip Hop,Trap & New Music",
+      "genre": "Pop",
+      "frequency": 0.0,
+      "mp3Stream": "https://astreaming.edi.ro:8443/virgin_mp3_64k",
+      "aacStream": "https://astreaming.edi.ro:8443/VirginRadio_aac",
+      "imageUrl": "https://virginradio.ro/wp-content/themes/virgin_v3/img/logo.png"
+    },
+    {
+      "id": "RO4",
+      "name": "Europa FM",
+      "country": "Romania",
+      "description": "Ascultă Radio Live",
+      "genre": "General, News",
+      "frequency": 106.7,
+      "mp3Stream": "https://astreaming.edi.ro:8443/europafm_mp3_64k ",
+      "aacStream": "https://astreaming.edi.ro:8443/EuropaFM_aac",
+      "imageUrl": "https://radio.byme.dev/RO/IMG/RO4.png"
+    },
+	  {
+      "id": "RO5",
+      "name": "Digi FM",
+      "country": "Romania",
+      "description": "",
+      "genre": "Pop, News",
+      "frequency": 101.1,
+      "mp3Stream": "http://edge76.rdsnet.ro:84/digifm/digifm.mp3",
+      "aacStream": "",
+      "imageUrl": "https://radio.byme.dev/RO/IMG/RO5.png"
+    },
+	  {
+      "id": "RO6",
+      "name": "Pro FM",
+      "country": "Romania",
+      "description": "",
+      "genre": "Pop, News",
+      "frequency": 102.8,
+      "mp3Stream": "http://edge126.rdsnet.ro:84/profm/profm.mp3",
+      "aacStream": "",
+      "imageUrl": "https://radio.byme.dev/RO/IMG/RO6.png"
+    },
+	  {
+      "id": "RO7",
+      "name": "Vibe FM",
+      "country": "Romania",
+      "description": "",
+      "genre": "Pop, Dance",
+      "frequency": 92.1,
+      "mp3Stream": "",
+      "aacStream": "http://astreaming.edi.ro:8000/VibeFM_aac",
+      "imageUrl": "https://radio.byme.dev/RO/IMG/RO7.png"
+    },
+	  {
+      "id": "RO8",
+      "name": "National FM",
+      "country": "Romania",
+      "description": "",
+      "genre": "Pop, Dance",
+      "frequency": 0.0,
+      "mp3Stream": "http://live2.nationalfm.ro:8001/",
+      "aacStream": "",
+      "imageUrl": "https://www.nationalfm.ro/assets/img/logo-national-fm.jpg"
+    },
+	  {
+      "id": "RO9",
+      "name": "Romantic FM",
+      "country": "Romania",
+      "description": "Muzica nu zgomot",
+      "genre": "Pop, Romantic",
+      "frequency": 101.9,
+      "mp3Stream": "http://zuicast.digitalag.ro:9420/romanticfm",
+      "aacStream": "",
+      "imageUrl": "https://romanticfm.ro/img/logo.png"
+    },
+	  {
+      "id": "RO10",
+      "name": "Magic FM",
+      "country": "Romania",
+      "description": "Always great Music",
+      "genre": "Pop, Romantic",
+      "frequency": 101.9,
+      "mp3Stream": "",
+      "aacStream": "https://live.magicfm.ro/magicfm.aacp",
+      "imageUrl": "https://www.magicfm.ro/assets/logo/magicfm.png"
+    },
+	{
+      "id": "RO11",
+      "name": "Radio Guerrilla FM",
+      "country": "Romania",
+      "description": "Binili invinge",
+      "genre": "Pop, news",
+      "frequency": 93.9,
+      "mp3Stream": "",
+      "aacStream": "http://live.guerrillaradio.ro:8010/guerrilla.aac",
+      "imageUrl": "https://guerrillaradio.b-cdn.net/wp-content/themes/guerrilla/library/images/new_logo_header.png"
+    },
+	  {
+      "id": "RO12",
+      "name": "Rock FM",
+      "country": "Romania",
+      "description": "It Rocks!",
+      "genre": "Rock",
+      "frequency": 91.2,
+      "mp3Stream": "",
+      "aacStream": "https://live.rockfm.ro/rockfm.aacp",
+      "imageUrl": "https://media.bauerradio.com/image/upload/c_crop,g_custom/v1598872147/brand_manager/radio_brands/sxduzaoopcj1xuqtup8f.png"
+    },
+	  {
+      "id": "RO13",
+      "name": "Radio Brasov",
+      "country": "Romania",
+      "description": "Frecvența care face diferența!",
+      "genre": "Pop, News Regional",
+      "frequency": 87.8,
+      "mp3Stream": "https://live.radiobrasov.ro/stream.mp3",
+      "aacStream": "",
+      "imageUrl": "https://www.radiobrasov.ro/img/radio_brasov.png"
+    }
+  ]
+}

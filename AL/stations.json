@@ -1,0 +1,103 @@
+{
+  "stations": [
+    {
+      "id": "AL1",
+      "name": "Top Albania Radio",
+      "country": "Albania",
+      "description": "Top Albania Radio Live - Best on the top!",
+      "genre": "Dance, Pop Music, World Music",
+      "frequency": 92.9,
+      "mp3Stream": "https://live.top-media.al/tar",
+      "aacStream": "",
+      "imageUrl": "https://radio.byme.dev/AL/IMG/AL1.png"
+    },
+    {
+      "id": "AL2",
+      "name": "Top Gold",
+      "country": "Albania",
+      "description": "Best Gold music through the years",
+      "genre": "Classic Rock, Pop and R&B, Oldies",
+      "frequency": 100.8,
+      "mp3Stream": "https://live.topgold.al/topgold",
+      "aacStream": "",
+      "imageUrl": "https://radio.byme.dev/AL/IMG/AL2.png"
+    },
+    {
+      "id": "AL3",
+      "name": "My Music Radio",
+      "country": "Albania",
+      "description": "Flladi i muzikes shqiptare ne vite",
+      "genre": "Albanian Folk Music, Pop, Rock",
+      "frequency": 97.3,
+      "mp3Stream": "https://live.top-media.al/mmr",
+      "aacStream": "",
+      "imageUrl": "https://radio.byme.dev/AL/IMG/AL3.png" 
+    },
+    {
+      "id": "AL4",
+      "name": "Radio Shqip",
+      "country": "Albania",
+      "description": "Flladi i muzikes shqiptare ne vite",
+      "genre": "Albanian Folk Music, Pop, Rock",
+      "frequency": 92.0,
+      "mp3Stream": "https://cp1.sednastream.com/proxy/radioshqip?mp=%2F%3Bstream.mp3",
+      "aacStream": "",
+      "imageUrl": "https://radio.byme.dev/AL/IMG/AL4.png"
+    },
+    {
+      "id": "AL5",
+      "name": "Radio Tirana 1",
+      "country": "Albania",
+      "description": "Albanian Radio Television",
+      "genre": "Music, News, Arts & Culture, Pop Music, World Music",
+      "frequency": 99.5,
+      "mp3Stream": "http://79.106.48.2:8000/radiotirana1",
+      "aacStream": "",
+      "imageUrl": "https://radio.byme.dev/AL/IMG/AL5.png" 
+    }, 
+    {
+      "id": "AL6",
+      "name": "Radio Tirana 2",
+      "country": "Albania",
+      "description": "Albanian Radio Television",
+      "genre": "Music, News, Arts & Culture, Pop Music, World Music",
+      "frequency": 99.8,
+      "mp3Stream": "http://79.106.48.2:8000/radiotirana2",
+      "aacStream": "",
+      "imageUrl": "https://radio.byme.dev/AL/IMG/AL6.png" 
+    },
+    {
+      "id": "AL7",
+      "name": "Radio Tirana 3",
+      "country": "Albania",
+      "description": "Albanian Radio Television",
+      "genre": "Music, News, Arts & Culture, Pop Music, World Music",
+      "frequency": 99.9,
+      "mp3Stream": "http://79.106.48.2:8000/radiotirana3",
+      "aacStream": "",
+      "imageUrl": "https://radio.byme.dev/AL/IMG/AL7.png" 
+    },
+    {
+      "id": "AL8",
+      "name": "Radio Tirana Klasik",
+      "country": "Albania",
+      "description": "Albanian Radio Television",
+      "genre": "Classic Music, World Music",
+      "frequency": 101.2,
+      "mp3Stream": "http://79.106.48.2:8000/radiotiranaklasik1",
+      "aacStream": "",
+      "imageUrl": "https://radio.byme.dev/AL/IMG/AL8.png" 
+    },
+    {
+      "id": "AL9",
+      "name": "Radio Tirana Femije",
+      "country": "Albania",
+      "description": "Albanian Radio Television",
+      "genre": "Music, News, Arts & Culture, Pop Music, World Music",
+      "frequency": 102.1,
+      "mp3Stream": "http://79.106.48.2:8000/radiotiranafemije",
+      "aacStream": "",
+      "imageUrl": "https://radio.byme.dev/AL/IMG/AL9.png" 
+    }
+  ]
+}
